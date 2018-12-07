@@ -1,15 +1,19 @@
 \documentclass[11pt,twoside]{article}
 
-%\usepackage[utf8x]{inputenc}
 \usepackage[utf8]{inputenc}% Включаем поддержку UTF8
-\usepackage[russian]{babel}% Включаем пакет для поддержки русского языка
 \usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}% Включаем пакет для поддержки русского языка
 \usepackage{amsfonts} % русские буквы в формулах
 
 \usepackage{amsmath}
 
 \begin{document}
     \begin{enumerate}
+        \item \begin{equation}
+                  \label{equation_degree}
+                  x^{2}
+        \end{equation}
+
         \item \begin{equation}
                   \label{equation_cortege}
                   (A;B;\dots;K)
@@ -29,27 +33,76 @@
                   \label{equation_twoWindowsCustomersDistribution}
                   P_\text{поверн}=\frac{n_\text{поверн}}{N}=0,0278
         \end{equation}
-        
+
         \item \begin{equation}
-                  \label{equation_}
+                  \label{equation_buyerLeave}
                   P_\text{ухід}\vert(E="\text{черга}")=\frac{n_\text{ухід}}{N}=0,1852
         \end{equation}
 
+        \item \begin{equation}
+                  \label{equation_regression}
+                  \hat{S}=-9,159 + 26,769t,r^{2}_{tS}=0,6463
+        \end{equation}
+
+
     \end{enumerate}
+
+    \begin{table}[h]
+        \label{tabular_table_5}
+        \caption{Table 5}
+        \renewcommand{\arraystretch}{1}
+        \renewcommand{\tabcolsep}{1mm}
+        \begin{center}
+            \begin{tabular}{|p{0.4\linewidth}|c|c|c|}
+                \hline
+                Input modeling &
+                \footnotesize$\hat{\lambda}^{\text{exp}}_{\text{черга}}=\lambda^{\text{exp}}_{\text{черга}}=0,5106$ \normalsize&
+                \footnotesize $\hat{\lambda}^{\text{exp}}_{\text{черга}}=0,7\lambda^{\text{exp}}_{\text{черга}}=0,3574$  \normalsize&
+                \footnotesize $\hat{\lambda}^{\text{exp}}_{\text{черга}}=\lambda^{\text{exp}}_{\text{черга}}=0,5106$ \normalsize\\
+                parameters& \footnotesize $\hat{\lambda}^{\text{exp}}_{\text{обслуг.}}=\lambda^{\text{exp}}_{\text{обслуг.}}=0,4848$ \normalsize&
+                \footnotesize$\hat{\lambda}^{\text{exp}}_{\text{обслуг.}}=\lambda^{\text{exp}}_{\text{обслуг.}}=0,4848$ \normalsize&
+                \footnotesize$\hat{\lambda}^{\text{exp}}_{\text{обслуг.}}=1,4\lambda^{\text{exp}}_{\text{обслуг.}}=0,6787$ \normalsize\\
+                \hline
+                Number of experiment, & №1,everyday situation & №2,30\% intensity increase & №3,40\% increase of \\
+                comments & & of buyers arrival & service time\\
+                \hline
+                Number of transacts & 103 & 180 & 120\\
+                \hline
+                Average queue length, pers. & 1,9313 & 8,0491 & 7,0073\\
+                \hline
+                Average waiting in queue, min & 1,1579 & 2,4547 & 3,5036\\
+                \hline
+                Max queue length, pers. & 11 & 26 & 17\\
+                \hline
+                Max waiting in queue, min & 6,3943 & 9,8077 & 10,2605\\
+                \hline
+                Loading of a pharmacist №1 & 0,4151 & 0,6443 & 0,6071\\
+                \hline
+                Takings of a pharmacist №1, UAH & 2564,16 & 3525,72 & 2701,52\\
+                \hline
+                Loading of a pharmacist №2 & 0,4091 & 0,5986 & 0,6318\\
+                \hline
+                Takings of a pharmacist №2, UAH & 2014,69 & 3617,29 & 2793,10\\
+                \hline
+                Total takings, UAH & 4578,85 & 7143,01 & 5494,62\\
+                \hline
+            \end{tabular}
+        \end{center}
+    \end{table}
+
 
     \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
 
     Reference to cortege~(\ref{equation_cortege})
 
-    \\
-    Formule in text  $
-                         \label{eq:normal_dist}
-                         \frac{1}{\sigma\sqrt{2\pi}}
-                         \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+
+    Formula in text  $
+    \label{eq:normal_dist}
+    \frac{1}{\sigma\sqrt{2\pi}}
+    \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
     $ will looks like that
 
     \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-
 
 
 \end{document}
